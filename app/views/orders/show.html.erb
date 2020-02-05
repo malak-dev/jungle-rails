@@ -1,10 +1,45 @@
 <section class="orders-show">
 
   <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
-  </header>
+    <h1>Order </h1>
+    <h2>Email: <%= @order.email%></h2>
+    </header>
+    <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+        <th>Name<th>
+        <th> Description</th>
+          <th>Image</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @products.each do |product|   %>
+        <tr>
+        <th><%= product.name%><th>
+        <th><%= product.description%></th>
+        <th>
+        <%= image_tag product.image.tiny %></th>
+        <th>
+        <% @lineItems.each do |li|%>
+          <%= li.quantity%>
+          <%end%>
+        </th>
+        </tr>
+        <%end %>
+     </tbody>
+     </table>
+   
+     
+
+     <h2>Total price : <%=  humanized_money_with_symbol @order.total%></h2>
+     </div>
+    
+
 
   <div class="order-summary jumbotron">
+
     <h4>Thank you for your order!</h4>
   </div>
 

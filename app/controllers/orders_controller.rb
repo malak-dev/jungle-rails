@@ -1,9 +1,15 @@
 class OrdersController < ApplicationController
 
   def show
-    @order = Order.find(params[:id])
-  end
-
+    @order=Order.find(params[:id])
+    @products=[]
+    @lineItems = LineItem.where(:order_id => params[:id])
+    
+    @lineItems.each {|lineItem| 
+    @products.push(Product.find(lineItem.product_id))
+   }
+ 
+  end 
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)
