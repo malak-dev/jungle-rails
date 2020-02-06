@@ -4,9 +4,12 @@ class OrdersController < ApplicationController
     @order=Order.find(params[:id])
     @products=[]
     @lineItems = LineItem.where(:order_id => params[:id])
-    
+
     @lineItems.each {|lineItem| 
-    @products.push(Product.find(lineItem.product_id))
+    product=Product.find(lineItem.product_id)
+    product.quantity=lineItem.quantity
+    @products.push(product)
+
    }
  
   end 
