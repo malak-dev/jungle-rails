@@ -12,9 +12,9 @@ RSpec.describe Product, type: :model do
           expect(["Name can't be blank"]).to eql (product.errors.full_messages)
         end
       it "should have a price" do
-          product.price = nil
-          product.save
-          expect(["Price is not a number"]).to eql (product.errors.full_messages)
+          product.price = 1000
+          expect(product).to be_present
+         
 
         end
       it "should have a quantity" do
