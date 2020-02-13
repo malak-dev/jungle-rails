@@ -11,12 +11,13 @@ A mini e-commerce application built with Rails 4.2
 
 
 ## Screenshots
-!["Screenshot of the main page"](https://github.com/malak-dev/jungle-rails/blob/master/docs/main_page.png?raw=true)
 This is the home page when a user can purchase any product by adding to his cart
-!["Screenshot of the categories page"](https://github.com/malak-dev/jungle-rails/blob/master/docs/categories%20page.png?raw=true)
+!["Screenshot of the main page"](https://github.com/malak-dev/jungle-rails/blob/master/docs/main_page.png?raw=true)
 This is the categories page when the admin is able to add a new category
-!["Screenshot of my cart page"](https://github.com/malak-dev/jungle-rails/blob/master/docs/my%20cart%20page.png?raw=true)
+!["Screenshot of the categories page"](https://github.com/malak-dev/jungle-rails/blob/master/docs/categories%20page.png?raw=true)
 This is my cart page when a user can pay to purchase the products
+!["Screenshot of my cart page"](https://github.com/malak-dev/jungle-rails/blob/master/docs/my%20cart%20page.png?raw=true)
+
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
