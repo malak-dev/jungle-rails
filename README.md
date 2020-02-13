@@ -1,10 +1,10 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 
+A mini e-commerce application built with Rails 4.2 ,where the user can sign up from any page 
+and buy some products by adding to the Shopping cart
 
 
 ## Setup
-
 1. Run `bundle install` to install dependencies
 2. Run `bin/rails s -b 0.0.0.0` to start the server
 
